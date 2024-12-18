@@ -30,11 +30,8 @@ Checked_list = open('Checked.txt', 'r').read().splitlines()
 Content_list = open("Sub1.txt",'r').read().splitlines()
 
 driver = webdriver.Chrome(r'C:\Standalone\chromedriver.exe')
-
 driver.get('https://order.subway.com/en-CA/signin?url=/en-CA/profile/paymentmethods')
-
 content_list = open("Sub1.txt",'r').read().splitlines()
-
 
 element = WebDriverWait(driver, 999999999999999).until(EC.presence_of_element_located((By.ID, "signInName")))
 #wabo = WebDriverWait(driver,
@@ -110,11 +107,9 @@ headers = {
     'Accept-Language': 'en-US,en;q=0.9',
 }
 
-
 print(headers)
 # Group site is REDACTED
 data = '{"Pan":"1111111111111111","Pin":"11111111","StoreID":"REDACTED-0","Preferred":true,"HasSavePayment":true}'
-
 
 print("System fully opperational.")
 
